@@ -34,9 +34,13 @@ class PointerInterceptor extends StatelessWidget {
   Widget build(BuildContext context) {
     if (Platform.isAndroid || Platform.isIOS) {
       return Stack(alignment: Alignment.center, children: <Widget>[
-        const Opacity(
+        Opacity(
           opacity: 0.01, // With 0 the work-around does not work on iOS.
-          child: InAppWebView(),
+          child: InAppWebView(
+            initialSettings: InAppWebViewSettings(
+              transparentBackground: true,
+            ),
+          ),
         ),
         child,
       ]);
