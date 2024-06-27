@@ -14,7 +14,8 @@ dependencies:
   flutter_inappwebview:
     git:
       url: https://github.com/KhatibFX/flutter_inappwebview.git
-      ref: master
+      ref: feature/dependency_downgrade
+      path: ./flutter_inappwebview
 
 dev_dependencies:
   flutter_test:
